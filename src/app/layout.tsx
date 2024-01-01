@@ -4,7 +4,7 @@ import './globals.css'
 import React from "react";
 
 const inter = Inter({ subsets: ['latin'] })
-const dancingScript = Dancing_Script({ subsets: ['latin'] })
+const dancingScript = Dancing_Script({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 
 export const metadata = {
   title: "Tejas' Portfolio",

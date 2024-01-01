@@ -27,7 +27,7 @@ import {
 import {useForm} from "@formspree/react";
 import {Dancing_Script} from "next/font/google";
 import Link from "next/link";
-const dancingScript = Dancing_Script({ subsets: ['latin'] })
+const dancingScript = Dancing_Script({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 
 const portfolioStyle = {
   layout: 'responsive',
