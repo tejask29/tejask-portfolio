@@ -51,7 +51,7 @@ export default function Home() {
                   <nav className={'py-10 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-950'}>
                       <h1 className={`text-xl ${dancingScript.className} dark:text-white `}><a href='#'> Hi, I&apos;m
                           Tejas</a></h1>
-                      <ul className={'flex items-center justify-center flex-row px-2 lg:gap-4 md:gap-4'}>
+                      <ul className={'flex items-center justify-center flex-row px-2 lg:gap-10 md:gap-10'}>
                           <li className={'dark:text-white hover:text-blue-500'}>
                               <a href="#about" style={scroll}>About</a>
                           </li>
@@ -61,12 +61,12 @@ export default function Home() {
                           <li className={'dark:text-white hover:text-blue-500'}>
                               <a href="#services" style={scroll}>Services</a>
                           </li>
-                          <li className={'dark:text-white hover:text-blue-500'}>
+                          {/*<li className={'dark:text-white hover:text-blue-500'}>
                               <a href="#projects" style={scroll}>Projects</a>
-                          </li>
-                          <li className={'dark:text-white hover:text-blue-500'}>
+                          </li>*/}
+                          {/*<li className={'dark:text-white hover:text-blue-500'}>
                               <a href="#contact" style={scroll}>Contact</a>
-                          </li>
+                          </li>*/}
                       </ul>
 
                       <ul className={'flex items-center justify-end'}>
@@ -246,16 +246,13 @@ export default function Home() {
 
                           <ul className='text-lg py-2 leading-8 text-grey-800 dark:text-gray-200 text-justify list-disc ml-9 '>
                               <li className='my-4'><span className='text-blue-500'>Full Stack Web Development  </span> :
-                                  I
-                                  can design and develop responsive web applications using modern frameworks like
-                                  Angular
-                                  and React, backed by efficient server-side implementations using Express and
+                                  I can design and develop responsive web applications using modern frameworks like
+                                  Angular and React, backed by efficient server-side implementations using Express and
                                   Node.js.
                               </li>
                               <li className='my-4'><span
                                   className='text-blue-500'>Database Design and Implementation  </span>: I can design
-                                  and
-                                  implement efficient database solutions using MongoDB, ensuring data integrity and
+                                  and implement efficient database solutions using MongoDB, ensuring data integrity and
                                   scalability for web applications and data-driven systems
                               </li>
                               <li className='my-4'><span className='text-blue-500'>API Development  </span>: I have
@@ -305,8 +302,7 @@ export default function Home() {
                               className='text-center shadow-lg  p-10 rounded-xl my-10 dark:bg-gradient-to-b from-blue-800 to-blue-500'>
                               <div className='flex justify-center flex-col items-center '>
                                   {/*<Image src={consulting} width={100} height={100}/>*/}
-                                  <h3 className='text-lg font-medium pt-8 pb-2 text-black dark:text-white'>Software
-                                      Development</h3>
+                                  <h3 className='text-lg font-medium pt-8 pb-2 text-black dark:text-white'>DevOps</h3>
                                   <p className='py-2 text-black dark:text-white'>Designing, coding, testing, and
                                       maintaining computer programs and
                                       applications to meet specific user or business requirements.</p>
@@ -324,12 +320,12 @@ export default function Home() {
                           </div>
                       </div>
                   </div>
-                  <div className='py-10' id='projects'>
-                      {/*<div>
+                  {/*<div className='py-10' id='projects'>
+                      <div>
                       <h3 className='text-5xl py-2 mb-6 dark:text-white'>Portfolio</h3>
                       <p className='text-md py-2 leading-8 text-grey-800 dark:text-gray-200'>
                           My portfolio is a collection of diverse work samples that reflect my expertise and experience
-                          in <span className='text-cyan-500'> Full Stack development and Machine Learning </span> .
+                          in <span className='text-cyan-500'> Full Stack development and DevOps </span> .
                           It includes a range of projects, such as <span className='text-cyan-500'> Pizzeria-react-app , FlySmart , Medical Insurance Premium prediction , Intelligent Traffic Managment System, Portfolio Website </span>
                           each demonstrating my creativity, problem-solving abilities, and professional growth.
                       </p>
@@ -342,9 +338,9 @@ export default function Home() {
                           you will gain a deeper understanding of my skills and be able to assess my suitability for
                           your specific needs.
                       </p>
-                  </div>
+                  </div>*/}
 
-                  <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+                  {/*<div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
 
                       <div className='basis-1/3 flex-1 '>
                           <a href='https://github.com/Kshitij-Darwhekar/pizzeria-react-app' className='relative'>
@@ -360,13 +356,13 @@ export default function Home() {
                               </div>
                           </a>
                       </div>
-                  </div>*/}
-
                   </div>
+
+                  </div>*/}
               </section>
 
 
-              <section className='py-10' id='contact'>
+              {/*<section className='py-10' id='contact'>
                   <h1 className='text-5xl dark:text-gray-200 py-5'>Contact Me</h1>
                   <form onSubmit={handleSubmit}>
                       <label htmlFor='name' className='dark:text-gray-200'>Name</label>
@@ -384,7 +380,7 @@ export default function Home() {
                       { state.succeeded && <p className='text-green-600 mt-2 flex items-center'><BiCheck /> Submitted Successfully</p> }
                   </form>
 
-              </section>
+              </section>*/}
 
           </main>
       </div>
