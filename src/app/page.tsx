@@ -4,7 +4,6 @@ import Image from 'next/image'
 import {CSSProperties, useState} from "react";
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import Typewriter from 'typewriter-effect'
-import tejas from '../../public/images/profile.jpg';
 import {AiFillGithub, AiFillLinkedin, AiFillMail, AiFillMediumSquare, AiFillTwitterCircle} from "react-icons/ai";
 import {
     BiCheck,
@@ -136,7 +135,7 @@ export default function Home() {
                       <div className='flex items-center justify-center text-center mx-auto overflow-hidden'>
                           <div
                               className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 mt-20 overflow-hidden md:h-96 md:w-96 lg:w-96 lg:h-96'>
-                              <Image alt={'Tejas Kulkarni'} src={tejas} className={'z-0'}/>
+                              <Image alt={'Tejas Kulkarni'} src={"https://mynewfoliobucket.s3.ap-south-1.amazonaws.com/profile.JPG"} className={'z-0'}/>
                           </div>
                       </div>
                   </div>
