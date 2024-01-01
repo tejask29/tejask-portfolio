@@ -3,8 +3,7 @@ const nextConfig = {
     poweredByHeader: true,
     productionBrowserSourceMaps: true,
     compress: true,
-    cleanDistDir: true,
-    output: 'export'
+    cleanDistDir: true
 }
 
 module.exports = nextConfig

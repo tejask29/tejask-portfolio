@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {CSSProperties, useState} from "react";
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import Typewriter from 'typewriter-effect'
-import tejas from './../../public/images/profile.jpg';
+import tejas from '../../public/images/profile.jpg';
 import {AiFillGithub, AiFillLinkedin, AiFillMail, AiFillMediumSquare, AiFillTwitterCircle} from "react-icons/ai";
 import {
     BiCheck,
