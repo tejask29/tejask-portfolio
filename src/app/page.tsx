@@ -48,7 +48,7 @@ export default function Home() {
             <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-950 text-gray-700">
               <section className={'min-h-screen relative'}>
                   <nav className={'py-10 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-950'}>
-                      <h1 className={`text-xl ${dancingScript.className} dark:text-white `}><a href='#'> Hi, I&apos;m
+                      <h1 className={`text-xl ${dancingScript.className} dark:text-white `}><a href={`${process.env.WEBSITE_URL}`}> Hi, I&apos;m
                           Tejas</a></h1>
                       <ul className={'flex items-center justify-center flex-row px-2 lg:gap-10 md:gap-10'}>
                           <li className={'dark:text-white hover:text-blue-500'}>
@@ -135,7 +135,7 @@ export default function Home() {
                       <div className='flex items-center justify-center text-center mx-auto overflow-hidden'>
                           <div
                               className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 mt-20 overflow-hidden md:h-96 md:w-96 lg:w-96 lg:h-96'>
-                              <Image alt={'Tejas Kulkarni'} src={`${process.env.PROFILE_IMAGE}`} className={'z-0'} width={500} height={500} />
+                              <Image alt={'Tejas Kulkarni'} src={process.env.PROFILE_IMAGE} className={'z-0'} width={500} height={500} />
                           </div>
                       </div>
                   </div>
