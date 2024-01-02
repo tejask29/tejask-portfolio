@@ -76,7 +76,7 @@ export default function Home() {
                           </li>
                           <li>
                               <a
-                                  href="https://mynewfoliobucket.s3.ap-south-1.amazonaws.com/Tejas_Kulkarni_-_Full_Stack_Web_Developer.pdf"
+                                  href={process.env.RESUME_URL}
                                   target="_blank"
                                   rel="noopener noreferrer">
                                   <button
@@ -123,19 +123,19 @@ export default function Home() {
                       </p>
                       <div
                           className='text-5xl flex justify-center flex-row items-center text-gray-600 dark:text-gray-400 md:flex md:gap-10 lg:flex lg:gap-10 '>
-                          <a href='https://twitter.com/tejaskul2904'
+                          <a href={process.env.TWITTER_URL}
                              className='hover:text-blue-500'><AiFillTwitterCircle/></a>
-                          <a href='https://www.linkedin.com/in/tejaskulkarni29/'
+                          <a href={process.env.LINKEDIN_URL}
                              className='hover:text-blue-500'><AiFillLinkedin/></a>
-                          <a href='https://github.com/tejask29' className='hover:text-blue-500'><AiFillGithub/></a>
-                          <a href='https://medium.com/@tejask29'
+                          <a href={process.env.GITHUB_URL} className='hover:text-blue-500'><AiFillGithub/></a>
+                          <a href={process.env.MEDIUM_URL}
                              className='hover:text-blue-500'><AiFillMediumSquare/></a>
-                          <a href='mailto:tejaskulkarni294@gmail.com' className='hover:text-cyan-500'><AiFillMail/></a>
+                          <a href={process.env.EMAIL_ID_URL} className='hover:text-cyan-500'><AiFillMail/></a>
                       </div>
                       <div className='flex items-center justify-center text-center mx-auto overflow-hidden'>
                           <div
                               className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 mt-20 overflow-hidden md:h-96 md:w-96 lg:w-96 lg:h-96'>
-                              <Image alt={'Tejas Kulkarni'} src={"https://mynewfoliobucket.s3.ap-south-1.amazonaws.com/profile.JPG"} className={'z-0'}/>
+                              <Image alt={'Tejas Kulkarni'} src={`${process.env.PROFILE_IMAGE}`} className={'z-0'} width={500} height={500} />
                           </div>
                       </div>
                   </div>
