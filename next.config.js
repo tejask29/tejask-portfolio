@@ -4,6 +4,7 @@ const nextConfig = {
     productionBrowserSourceMaps: true,
     compress: true,
     cleanDistDir: true,
+    output: "export",
     images: {
         remotePatterns: [
             {
