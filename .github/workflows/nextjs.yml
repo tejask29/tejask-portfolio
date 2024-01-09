@@ -73,6 +73,18 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo NODE_ENV=${{ vars.NODE_ENV }} >> .env
+          echo PROFILE_IMAGE=${{ vars.PROFILE_IMAGE }} >> .env
+          echo EMAIL_ID_URL=${{ vars.EMAIL_ID_URL }} >> .env
+          echo GITH_URL=${{ vars.GITH_URL }} >> .env
+          echo LINKEDIN_URL=${{ vars.LINKEDIN_URL }} >> .env
+          echo MEDIUM_URL=${{ vars.MEDIUM_URL }} >> .env
+          echo RESUME_URL=${{ vars.RESUME_URL }} >> .env
+          echo TWITTER_URL=${{ vars.TWITTER_URL }} >> .env
+          echo WEBSITE_URL=${{ vars.WEBSITE_URL }} >> .env
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
