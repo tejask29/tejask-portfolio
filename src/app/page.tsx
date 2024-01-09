@@ -127,7 +127,7 @@ export default function Home() {
                              className='hover:text-blue-500'><AiFillTwitterCircle/></a>
                           <a href={process.env.LINKEDIN_URL}
                              className='hover:text-blue-500'><AiFillLinkedin/></a>
-                          <a href={process.env.GITHUB_URL} className='hover:text-blue-500'><AiFillGithub/></a>
+                          <a href={process.env.GITH_URL} className='hover:text-blue-500'><AiFillGithub/></a>
                           <a href={process.env.MEDIUM_URL}
                              className='hover:text-blue-500'><AiFillMediumSquare/></a>
                           <a href={process.env.EMAIL_ID_URL} className='hover:text-cyan-500'><AiFillMail/></a>
