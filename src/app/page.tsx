@@ -41,7 +41,7 @@ const scroll: CSSProperties = {
 export default function Home() {
 
   const [darkMode, setDarkMode] = useState(true)
-    const [state, handleSubmit] = useForm('mrgwzblg')
+    // const [state, handleSubmit] = useForm('mrgwzblg')
 
     return (
         <div className={darkMode ? 'dark' : ''}>
@@ -361,9 +361,9 @@ export default function Home() {
               </section>
 
 
-              {/*<section className='py-10' id='contact'>
+              <section className='py-10' id='contact'>
                   <h1 className='text-5xl dark:text-gray-200 py-5'>Contact Me</h1>
-                  <form onSubmit={handleSubmit}>
+                  <form onSubmit={() => alert("This form will work only till here unfortunately. But don't worry if I build your form that will work more than this. ")}>
                       <label htmlFor='name' className='dark:text-gray-200'>Name</label>
                       <input type='text' id='name'
                              className='border-2 border-blue-500 p-2 rounded-lg w-full dark:border-blue-500 dark:bg-black dark:text-gray-200 mb-5'/>
@@ -373,13 +373,13 @@ export default function Home() {
                       <label htmlFor='message' className='dark:text-gray-200'>Message</label>
                       <textarea name='message' id='message' cols={30} rows={10}
                                 className='border-2 border-blue-500  p-2 py-4 rounded-lg w-full dark:border-blue-500 dark:bg-black dark:text-gray-200 mb-5'></textarea>
-                      <button disabled={state.submitting}
+                      <button
                               className='bg-gradient-to-r from-blue-700 to-blue-500  text-white px-4 py-2 rounded-lg'>Submit
                       </button>
-                      { state.succeeded && <p className='text-green-600 mt-2 flex items-center'><BiCheck /> Submitted Successfully</p> }
+                      {/*{ state.succeeded && <p className='text-green-600 mt-2 flex items-center'><BiCheck /> Submitted Successfully</p> }*/}
                   </form>
 
-              </section>*/}
+              </section>
 
           </main>
       </div>
