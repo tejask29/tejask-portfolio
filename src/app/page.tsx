@@ -40,7 +40,7 @@ const scroll: CSSProperties = {
 
 export default function Home() {
 
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
     // const [state, handleSubmit] = useForm('mrgwzblg')
 
     return (
