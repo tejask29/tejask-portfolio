@@ -65,9 +65,9 @@ export default function Home() {
                           {/*<li className={'dark:text-white hover:text-blue-500'}>
                               <a href="#projects" style={scroll}>Projects</a>
                           </li>*/}
-                          {/*<li className={'dark:text-white hover:text-blue-500'}>
+                          <li className={'dark:text-white hover:text-blue-500'}>
                               <a href="#contact" style={scroll}>Contact</a>
-                          </li>*/}
+                          </li>
                       </ul>
 
                       <ul className={'flex items-center justify-end'}>
