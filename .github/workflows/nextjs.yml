@@ -76,15 +76,15 @@ jobs:
       - name: 'Create env file'
         run: |
           touch .env
-          echo NODE_ENV=${{ env.vars.NODE_ENV }} >> .env
-          echo PROFILE_IMAGE=${{ env.vars.PROFILE_IMAGE }} >> .env
-          echo EMAIL_ID_URL=${{ env.vars.EMAIL_ID_URL }} >> .env
-          echo GITH_URL=${{ env.vars.GITH_URL }} >> .env
-          echo LINKEDIN_URL=${{ env.vars.LINKEDIN_URL }} >> .env
-          echo MEDIUM_URL=${{ env.vars.MEDIUM_URL }} >> .env
-          echo RESUME_URL=${{ env.vars.RESUME_URL }} >> .env
-          echo TWITTER_URL=${{ env.vars.TWITTER_URL }} >> .env
-          echo WEBSITE_URL=${{ env.vars.WEBSITE_URL }} >> .env
+          echo NODE_ENV=${{ env.NODE_ENV }} >> .env
+          echo PROFILE_IMAGE=${{ env.PROFILE_IMAGE }} >> .env
+          echo EMAIL_ID_URL=${{ env.EMAIL_ID_URL }} >> .env
+          echo GITH_URL=${{ env.GITH_URL }} >> .env
+          echo LINKEDIN_URL=${{ env.LINKEDIN_URL }} >> .env
+          echo MEDIUM_URL=${{ env.MEDIUM_URL }} >> .env
+          echo RESUME_URL=${{ env.RESUME_URL }} >> .env
+          echo TWITTER_URL=${{ env.TWITTER_URL }} >> .env
+          echo WEBSITE_URL=${{ env.WEBSITE_URL }} >> .env
           echo secrets=${{ secrets }}
           echo vars=${{ vars }}
           echo env=${{ env }}
