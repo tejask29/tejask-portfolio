@@ -2,17 +2,19 @@
 
 import Image from 'next/image'
 import {CSSProperties, useState} from "react";
-import { BsFillMoonStarsFill } from 'react-icons/bs'
+import {BsFillMoonStarsFill} from 'react-icons/bs'
 import Typewriter from 'typewriter-effect'
 import {AiFillGithub, AiFillLinkedin, AiFillMail, AiFillMediumSquare, AiFillTwitterCircle} from "react-icons/ai";
 import {
-    BiCheck,
-    BiLogoAngular, BiLogoBootstrap,
+    BiLogoAngular,
+    BiLogoBootstrap,
     BiLogoCss3,
-    BiLogoJavascript, BiLogoMongodb,
+    BiLogoHtml5,
+    BiLogoMongodb,
     BiLogoNodejs,
     BiLogoReact,
-    BiLogoTailwindCss
+    BiLogoTailwindCss,
+    BiLogoAws, BiLogoFirebase, BiLogoKubernetes, BiLogoDocker
 } from "react-icons/bi";
 import {
     SiAmazonaws,
@@ -20,13 +22,13 @@ import {
     SiDocker,
     SiExpress,
     SiFirebase,
-    SiHtml5,
     SiJenkins,
-    SiKubernetes, SiTerraform
+    SiKubernetes,
+    SiTerraform
 } from "react-icons/si";
-import {useForm} from "@formspree/react";
+import { TbBrandAnsible } from "react-icons/tb";
 import {Dancing_Script} from "next/font/google";
-import Link from "next/link";
+
 const dancingScript = Dancing_Script({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 
 const portfolioStyle = {
@@ -47,7 +49,7 @@ export default function Home() {
         <div className={darkMode ? 'dark' : ''}>
             <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-950 text-gray-700">
               <section className={'min-h-screen relative'}>
-                  <nav className={'py-10 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-950'}>
+                  <nav className={'py-10 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-950'}>
                       <h1 className={`text-xl ${dancingScript.className} dark:text-white `}><a href={`${process.env.WEBSITE_URL}`}> Hi, I&apos;m
                           Tejas</a></h1>
                       <ul className={'flex items-center justify-center flex-row px-2 lg:gap-10 md:gap-10 sm:gap-10'}>
@@ -92,7 +94,13 @@ export default function Home() {
                     <Image src={tejas} alt={'Profile Image - Tejas Kulkarni'} width={150} height={150}
                            className={'bg-contain rounded-full'}/>
                 </div>*/}
-
+                      <div className='flex items-center justify-center text-center mx-auto overflow-hidden'>
+                          <div
+                              className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 mt-20 overflow-hidden md:h-50 md:w-50 lg:w-50 lg:h-50'>
+                              <Image alt={'Tejas Kulkarni'} src={`${process.env.PROFILE_IMAGE}`} className={'z-0'}
+                                     width={500} height={500} onDragStart={event => event.preventDefault()}/>
+                          </div>
+                      </div>
                       <h2 className={'text-5xl py-10 text-blue-400 font-medium dark:text-gradient-to-r from-cyan-700 to-cyan-500 md:text-6xl'}>
                           <Typewriter
                               options={{
@@ -111,9 +119,11 @@ export default function Home() {
                           DevOps
                           Enthusiast</h3>
                       <p className='text-md py-5 leading-8 text-gray-800 dark:text-gray-200 md:text-xl max-w-10xl mx-auto'>
-                          I&apos;m a full stack developer and DevOps enthusiast with a degree in Computer engineering having
+                          I&apos;m a full stack developer and DevOps enthusiast with a degree in Computer engineering
+                          having
                           5 years of experience .
-                          I&apos;m passionate about leveraging my expertise in both front-end and back-end technologies to
+                          I&apos;m passionate about leveraging my expertise in both front-end and back-end technologies
+                          to
                           create
                           innovative solutions.
                           With a deep understanding of backend and frontend, I strive to develop fluent and scalable
@@ -123,48 +133,44 @@ export default function Home() {
                       </p>
                       <div
                           className='text-5xl flex justify-center flex-row items-center text-gray-600 dark:text-gray-400 md:flex md:gap-10 lg:flex lg:gap-10 '>
-                          <a href={process.env.GITH_URL} className='hover:text-blue-500'><AiFillGithub/></a>
-                          <a href={process.env.LINKEDIN_URL}
+                          <a target="_blank" href={process.env.GITH_URL} className='hover:text-blue-500'><AiFillGithub/></a>
+                          <a target="_blank" href={process.env.LINKEDIN_URL}
                              className='hover:text-blue-500'><AiFillLinkedin/></a>
-                          <a href={process.env.TWITTER_URL}
+                          <a target="_blank" href={process.env.TWITTER_URL}
                              className='hover:text-blue-500'><AiFillTwitterCircle/></a>
-                          <a href={process.env.MEDIUM_URL}
+                          <a target="_blank" href={process.env.MEDIUM_URL}
                              className='hover:text-blue-500'><AiFillMediumSquare/></a>
-                          <a href={process.env.EMAIL_ID_URL} className='hover:text-cyan-500'><AiFillMail/></a>
+                          <a target="_blank" href={process.env.EMAIL_ID_URL}
+                             className='hover:text-cyan-500'><AiFillMail/></a>
                       </div>
-                      <div className='flex items-center justify-center text-center mx-auto overflow-hidden'>
-                          <div
-                              className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 mt-20 overflow-hidden md:h-96 md:w-96 lg:w-96 lg:h-96'>
-                              <Image alt={'Tejas Kulkarni'} src={`${process.env.PROFILE_IMAGE}`} className={'z-0'} width={500} height={500} onDragStart={event => event.preventDefault()} />
-                          </div>
-                      </div>
+
                   </div>
 
                   <div id='skills'>
                       <div>
                           <h1 className='text-5xl py-3 text-black dark:text-gray-200'> My Skills</h1>
                       </div>
-                      <div className='text-center p-10 rounded-xl my-10'>
+                      <div className='text-center p-10 rounded-xl mb-10'>
 
                           <h2 className='text-3xl p-10 my-13 dark:text-gray-200 mb-10'>Front End</h2>
                           <div className='flex flex-wrap justify-evenly mb-10'>
                               <div className='p-2 text-xl dark:text-gray-200 '><BiLogoAngular
-                                  className='w-40 h-40 text-red-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>Angular
+                                  className='w-30 h-30 text-red-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>Angular
                               </div>
                               <div className='p-2 text-xl dark:text-gray-200'><BiLogoReact
-                                  className='w-40 h-40 text-cyan-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>React
+                                  className='w-30 h-30 text-cyan-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>React
                               </div>
-                              <div className='p-2 text-xl dark:text-gray-200'><SiHtml5
-                                  className='w-40 h-40 text-orange-600 md:w-40 md:h-40 lg:w-48 lg:h-48'/>HTML
+                              <div className='p-2 text-xl dark:text-gray-200'><BiLogoHtml5
+                                  className='w-30 h-30 text-orange-600 md:w-40 md:h-40 lg:w-48 lg:h-48'/>HTML
                               </div>
                               <div className='p-2 text-xl dark:text-gray-200'><BiLogoCss3
-                                  className='w-40 h-40 text-blue-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>CSS
+                                  className='w-30 h-30 text-blue-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>CSS
                               </div>
                               <div className='p-2 text-xl dark:text-gray-200'><BiLogoTailwindCss
-                                  className='w-40 h-40 text-blue-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>Tailwind CSS
+                                  className='w-30 h-30 text-blue-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>Tailwind CSS
                               </div>
                               <div className='p-2 text-xl dark:text-gray-200'><BiLogoBootstrap
-                                  className='w-40 h-40 text-purple-700 md:w-40 md:h-40 lg:w-48 lg:h-48'/>Bootstrap
+                                  className='w-30 h-30 text-purple-700 md:w-40 md:h-40 lg:w-48 lg:h-48'/>Bootstrap
                               </div>
                           </div>
 
@@ -192,7 +198,7 @@ export default function Home() {
                               <div className='p-2 text-xl dark:text-gray-200'><BiLogoMongodb
                                   className='w-40 h-40 text-green-600 md:w-40 md:h-40 lg:w-48 lg:h-48'/>MongoDB
                               </div>
-                              <div className='p-2 text-xl dark:text-gray-200'><SiFirebase
+                              <div className='p-2 text-xl dark:text-gray-200'><BiLogoFirebase
                                   className='w-40 h-40 text-yellow-500 md:w-40 md:h-40 lg:w-48 lg:h-48'/>Firebase
                               </div>
                           </div>
@@ -203,16 +209,16 @@ export default function Home() {
 
                           <h2 className='text-3xl p-7 dark:text-gray-200 mb-10'>DevOps</h2>
                           <div className='flex flex-wrap justify-evenly mb-10'>
-                              <div className='p-2 text-xl dark:text-gray-200'><SiDocker
+                              <div className='p-2 text-xl dark:text-gray-200'><BiLogoDocker
                                   className='w-40 h-40 text-[#0db7ed] md:w-40 md:h-40 lg:w-48 lg:h-48 mb-5'/>Docker
                               </div>
-                              <div className='p-2 text-xl dark:text-gray-200'><SiKubernetes
+                              <div className='p-2 text-xl dark:text-gray-200'><BiLogoKubernetes
                                   className='w-40 h-40 text-[#3970e4] md:w-40 md:h-40 lg:w-48 lg:h-48 mb-5'/>Kubernetes
                               </div>
                               <div className='p-2 text-xl dark:text-gray-200'><SiJenkins
                                   className='w-40 h-40 text-[#48728B] md:w-40 md:h-40 lg:w-48 lg:h-48 mb-5'/> Jenkins
                               </div>
-                              <div className='p-2 text-xl dark:text-gray-200'><SiAnsible
+                              <div className='p-2 text-xl dark:text-gray-200'><TbBrandAnsible
                                   className='w-40 h-40 text-red-500 md:w-40 md:h-40 lg:w-48 lg:h-48 mb-5'/> Ansible
                               </div>
                               <div className='p-2 text-xl dark:text-gray-200'><SiTerraform
@@ -226,7 +232,7 @@ export default function Home() {
 
                           <h2 className='text-3xl p-7 dark:text-gray-200'>Cloud Technologies</h2>
                           <div className='flex flex-wrap justify-evenly'>
-                              <div className='p-2 text-xl dark:text-gray-200'><SiAmazonaws
+                              <div className='p-2 text-xl dark:text-gray-200'><BiLogoAws
                                   className='w-40 h-40 text-yellow-600 md:w-40 md:h-40 lg:w-48 lg:h-48 mb-5'/>Amazon Web
                                   Services
                               </div>
