@@ -76,15 +76,17 @@ jobs:
       - name: 'Create env file'
         run: |
           touch .env
-          echo NODE_ENV=${{ env.NODE_ENV }} >> .env
-          echo PROFILE_IMAGE=${{ env.PROFILE_IMAGE }} >> .env
-          echo EMAIL_ID_URL=${{ env.EMAIL_ID_URL }} >> .env
-          echo GITH_URL=${{ env.GITH_URL }} >> .env
-          echo LINKEDIN_URL=${{ env.LINKEDIN_URL }} >> .env
-          echo MEDIUM_URL=${{ env.MEDIUM_URL }} >> .env
-          echo RESUME_URL=${{ env.RESUME_URL }} >> .env
-          echo TWITTER_URL=${{ env.TWITTER_URL }} >> .env
-          echo WEBSITE_URL=${{ env.WEBSITE_URL }} >> .env
+          echo NODE_ENV=${{ secrets.NODE_ENV }} >> .env
+          echo PROFILE_IMAGE=${{ secrets.PROFILE_IMAGE }} >> .env
+          echo EMAIL_ID_URL=${{ secrets.EMAIL_ID_URL }} >> .env
+          echo GITH_URL=${{ secrets.GITH_URL }} >> .env
+          echo LINKEDIN_URL=${{ secrets.LINKEDIN_URL }} >> .env
+          echo MEDIUM_URL=${{ secrets.MEDIUM_URL }} >> .env
+          echo RESUME_URL=${{ secrets.RESUME_URL }} >> .env
+          echo TWITTER_URL=${{ secrets.TWITTER_URL }} >> .env
+          echo WEBSITE_URL=${{ secrets.WEBSITE_URL }} >> .env
+          echo secrets=${{ secrets }}
+          echo vars=${{ vars }}
           cat .env
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
