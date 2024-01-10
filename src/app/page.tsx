@@ -123,11 +123,11 @@ export default function Home() {
                       </p>
                       <div
                           className='text-5xl flex justify-center flex-row items-center text-gray-600 dark:text-gray-400 md:flex md:gap-10 lg:flex lg:gap-10 '>
-                          <a href={process.env.TWITTER_URL}
-                             className='hover:text-blue-500'><AiFillTwitterCircle/></a>
+                          <a href={process.env.GITH_URL} className='hover:text-blue-500'><AiFillGithub/></a>
                           <a href={process.env.LINKEDIN_URL}
                              className='hover:text-blue-500'><AiFillLinkedin/></a>
-                          <a href={process.env.GITH_URL} className='hover:text-blue-500'><AiFillGithub/></a>
+                          <a href={process.env.TWITTER_URL}
+                             className='hover:text-blue-500'><AiFillTwitterCircle/></a>
                           <a href={process.env.MEDIUM_URL}
                              className='hover:text-blue-500'><AiFillMediumSquare/></a>
                           <a href={process.env.EMAIL_ID_URL} className='hover:text-cyan-500'><AiFillMail/></a>
